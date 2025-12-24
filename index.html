@@ -51,11 +51,16 @@
   transform: scale(0.9, 0.9);
 }
     <script>
-  const seal = document.getElementById("seal");
-  const linkMessage = document.getElementById("link-message");
+document.getElementById("seal").addEventListener("click", function() {
+  const seal = this;
+  seal.classList.add("pressed");
 
-  seal.addEventListener("click", () => {
-    // ぷにっと処理（すでにあるならそのまま）
+  setTimeout(function() {
+    window.location.href = "https://example.com";
+  }, 350); // ← ここが「ぷにっと待ち時間」
+});
+</script>
+
 
     setTimeout(() => {
       linkMessage.style.display = "block";
