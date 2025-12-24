@@ -39,14 +39,24 @@
     display: block;
     margin: 20px auto;
   }
-    
+
+    #azarashi {
+  width: 150px;           /* 好きな大きさでOK */
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+#azarashi:active {
+  transform: scale(0.9, 0.9);
+}
+
   </style>
 </head>
 <body>
   <div class="box">
     <div class="seal">🦭</div>
 
-    <img src="seal2.png" class="seal" alt="あざらし" width="120">
+    <img src="seal2.png" class="seal" alt="あざらし" width="120" id="azarashi">
 
     <p>
       メリークリスマス🎄.*<br>
