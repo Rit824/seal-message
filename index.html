@@ -59,15 +59,7 @@ document.getElementById("seal").addEventListener("click", function() {
     window.location.href = "https://example.com";
   }, 350); // ← ここが「ぷにっと待ち時間」
 });
-</script>
-
-
-    setTimeout(() => {
-      linkMessage.style.display = "block";
-    }, 700)); // 0.7秒後に表示
-  });
-
-<script>
+    
   const snowContainer = document.getElementById("snow-container");
 
   function createSnow() {
@@ -92,8 +84,6 @@ document.getElementById("seal").addEventListener("click", function() {
   setInterval(createSnow, 300);
 </script>
 
-  
-</script>
 
   /* 雪全体のコンテナ */
 #snow-container {
