@@ -60,51 +60,27 @@ document.getElementById("seal").addEventListener("click", function() {
   }, 350); // ← ここが「ぷにっと待ち時間」
 });
     
+
   
 </script>
-
-/* 雪を入れるためのコンテナ */
-#snow-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* タップ邪魔しない */
-  z-index: 1; /* あざらしより後ろにする */
-  overflow: hidden;
-}
-
-/* 雪の粒 */
-.snowflake {
-  position: absolute;
-  top: -10px;
-  width: 6px;
-  height: 6px;
-  background: rgba(200, 230, 255, 0.9); /* 水色寄りの雪 */
-  border-radius: 50%;
-  animation-name: fall;
-  animation-timing-function: linear;
-}
-
-/* 落ちるアニメーション */
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #e8f6ff,
+    #cfefff
+  );
+  font-family: "Hiragino Maru Gothic ProN", sans-serif;
+  text-align: center;
 }
 
 
   </style>
 </head>
-  <script>
-  console.log("snow test");
-</script>
 
 <body>
-  <div id="snow-container"></div>
-
-    </div>
+ 
 <a href="https://example.com "target="_blank" >
     <img src="seal2.png" class="seal" alt="あざらし" width="120" id="azarashi">
 </a>
