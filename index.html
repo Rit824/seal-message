@@ -45,18 +45,32 @@
   cursor: pointer;
   transition: transform 0.15s ease;
 }
+    <script>
+  const seal = document.getElementById("seal");
+  const linkMessage = document.getElementById("link-message");
 
-#azarashi:active {
-  transform: scale(0.9, 0.9);
-}
+  seal.addEventListener("click", () => {
+    // ぷにっと処理（すでにあるならそのまま）
+
+    setTimeout(() => {
+      linkMessage.style.display = "block";
+    }, 600); // 0.6秒後に表示
+  });
+</script>
+
 
   </style>
 </head>
 <body>
   <div class="box">
     <div class="seal">🦭</div>
-
+  
+<a href="https://example.com "target="_blank" >
     <img src="seal2.png" class="seal" alt="あざらし" width="120" id="azarashi">
+</a>
+    <p id="link-message" style="display:none; margin-top:16px;">
+  よろしければおつかいください😊<br>
+</p>
 
     <p>
       メリークリスマス🎄.*<br>
