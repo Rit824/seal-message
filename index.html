@@ -51,6 +51,7 @@
   cursor: pointer;
   transition: transform 0.15s ease;
 }
+
     }
 
 #azarashi:active {
@@ -64,6 +65,14 @@ document.getElementById("seal").addEventListener("click", function() {
   setTimeout(function() {
     window.location.href = "https://example.com";
   }, 350); // ← ここが「ぷにっと待ち時間」
+    const seal = document.getElementById("seal");
+const message = document.getElementById("seal-message");
+
+seal.addEventListener("click", () => {
+  message.style.opacity = "1";
+  message.style.transform = "translateY(0)";
+});
+
 });
     
 
@@ -138,6 +147,15 @@ body {
   display: none;
 }
 
+  #seal-message {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  font-size: 18px;
+  color: #6bb6d6; /* 水色系 */
+  margin-top: 10px;
+}
+
 
   </style>
 </head>
@@ -150,9 +168,7 @@ body {
 <a href="https://example.com "target="_blank" >
     <img src="seal2.png" class="seal" alt="あざらし" width="120" id="azarashi">
 </a>
-    <p id="link-message" style="display:none; margin-top:16px;">
-  よろしければおつかいください😊<br>
-</p>
+    <p id="seal-message">独立、おめでとうございます！</p>
 
     <p>
       メリークリスマス🎄.*<br>
